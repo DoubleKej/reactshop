@@ -85,7 +85,7 @@ class MenuAppBar extends React.Component {
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            <TextField
+            <TextField 
               underlineShow={false}
               className={classes.textField}
               InputLabelProps={{
