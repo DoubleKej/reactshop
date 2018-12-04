@@ -8,7 +8,11 @@ import FlatButton from 'material-ui/FlatButton';
 import ContentCreate from 'material-ui/svg-icons/content/create';
 import Delete from 'material-ui/svg-icons/action/delete';
 import ContentAdd from 'material-ui/svg-icons/content/add';
-import { pink500, grey200, grey500 } from 'material-ui/styles/colors';
+import Icon from '@material-ui/core/Icon';
+
+import { pink500, grey200, grey500 } from '@material-ui/core/colors';
+
+
 import PageBase from '../components/PageBase';
 import axios from 'axios';
 import { stringify } from 'querystring';
@@ -95,7 +99,7 @@ class Category extends Component {
       .catch(function (error) {
         console.log(error);
       });
-    event.preventDefault();
+    // event.preventDefault();
   }
   getCurrentId(_id) {
     console.log('clicked ', _id);
@@ -155,7 +159,9 @@ class Category extends Component {
           <div>
             <Link to="/addcategory" >
               <FloatingActionButton style={styles.floatingActionButton} backgroundColor={pink500}>
-                <ContentAdd />
+              <Icon className={classes.icon} color="primary">
+        add_circle
+      </Icon>
               </FloatingActionButton>
             </Link>
 
